@@ -14,9 +14,13 @@ Realizamos el siguiente cambio a las últimas lineas del script *~/.bashrc*, de 
 
 Solo se modifica la variable ROS_DOMAIN=40, en donde el ID de domain puede ser cualquiera entre 0 a 101. *Es preferible verificar que no existan IDs compartidos en la misma red.*
 ****
-### Si los dispositivos se encuentran en diferentes redes
-Se debe instalar e iniciar Tailscale siguiendo los siguientes comandos:
+### Si los dispositivos se encuentran en diferentes redes Utilizar VPN Tailscale
+Se instala usando apt y luego se inicia Tailscale siguiendo los siguientes comandos:
 
+	curl -fsSL https://pkgs.tailscale.com/stable/ubuntu/focal.noarmor.gpg | sudo tee /usr/share/keyrings/tailscale-archive-keyring.gpg >/dev/null
+	curl -fsSL https://pkgs.tailscale.com/stable/ubuntu/focal.tailscale-keyring.list | sudo tee /etc/apt/sources.list.d/tailscale.list
+	sudo apt update
+	sudo apt install tailscale   
 	sudo systemctl start tailscaled
 	sudo tailscale up
 Puede ver el estado del vpn y del servicio utilizando:
@@ -26,6 +30,8 @@ También puede finalizar la sesión de tailscale usando:
 
 	sudo systemctl stop tailscaled
 	sudo tailscale down
+
+_Se debe realizar un log in con una cuenta para ambos dispositivos y anotar las direcciones IP provistas por Tailscale para realizar el cambio a la dirección IP en el archivo zenoh_router.json5
 ****
 Para realizar la conexion al router, hay que iniciarlo como se procede a continuacion en una terminal:
 
