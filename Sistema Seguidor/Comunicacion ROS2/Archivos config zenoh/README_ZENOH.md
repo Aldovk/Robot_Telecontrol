@@ -4,7 +4,7 @@
 Realizamos el siguiente cambio a las últimas lineas del script *~/.bashrc*, de tal manera que se inicialice de esta manera cada vez que se abra una nueva terminal. 
 ****
 ## Solo modificar si se desea un cambio permanente
-**Inicialización ROS2 y e inicialización del puente zenoh**
+**Inicialización ROS2 e inicialización del puente zenoh**
 
 	echo "Hello from the shell :)"
 	#ROS 2 Jazzy Setup
