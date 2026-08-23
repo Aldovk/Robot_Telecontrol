@@ -1,4 +1,4 @@
-# README Configuracion L
+# README Configuracion Leader
 ~~Solo se realiza de esta manera en caso de que se prefiera mantener permanentemente esta configuracion.~~
 
 Realizamos el siguiente cambio a las últimas lineas del script *~/.bashrc*, de tal manera que se inicialice de esta manera cada vez que se abra una nueva terminal. 

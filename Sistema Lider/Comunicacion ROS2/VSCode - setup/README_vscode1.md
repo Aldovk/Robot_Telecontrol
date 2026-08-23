@@ -1,0 +1,2 @@
+# README - Configuración vscode
+Se utilizó Microsoft Visual Studio Code para la configuración del ambiente en el cual el script de python encargado de crear y subscribirse a los nodos respectivos de ROS2 para la operación de teleoperación.
